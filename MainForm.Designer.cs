@@ -40,6 +40,7 @@
             this.ClearButton = new System.Windows.Forms.Button();
             this.CopyButton = new System.Windows.Forms.Button();
             this.PasteButton = new System.Windows.Forms.Button();
+            this.AppendButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,8 +72,9 @@
             this.tableLayoutPanel1.Controls.Add(this.SentenceCase, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.LowerCaseButton, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.CapitalizedCase, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.CopyButton, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.PasteButton, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CopyButton, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PasteButton, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.AppendButton, 4, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -173,9 +175,9 @@
             // CopyButton
             // 
             this.CopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CopyButton.Location = new System.Drawing.Point(528, 35);
+            this.CopyButton.Location = new System.Drawing.Point(648, 35);
             this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(114, 26);
+            this.CopyButton.Size = new System.Drawing.Size(101, 26);
             this.CopyButton.TabIndex = 9;
             this.CopyButton.Text = "Copy";
             this.CopyButton.UseVisualStyleBackColor = true;
@@ -184,13 +186,24 @@
             // PasteButton
             // 
             this.PasteButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PasteButton.Location = new System.Drawing.Point(648, 35);
+            this.PasteButton.Location = new System.Drawing.Point(528, 35);
             this.PasteButton.Name = "PasteButton";
-            this.PasteButton.Size = new System.Drawing.Size(101, 26);
+            this.PasteButton.Size = new System.Drawing.Size(114, 26);
             this.PasteButton.TabIndex = 10;
             this.PasteButton.Text = "Paste";
             this.PasteButton.UseVisualStyleBackColor = true;
             this.PasteButton.Click += new System.EventHandler(this.PasteButton_Click);
+            // 
+            // AppendButton
+            // 
+            this.AppendButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AppendButton.Location = new System.Drawing.Point(423, 35);
+            this.AppendButton.Name = "AppendButton";
+            this.AppendButton.Size = new System.Drawing.Size(99, 26);
+            this.AppendButton.TabIndex = 11;
+            this.AppendButton.Text = "Append";
+            this.AppendButton.UseVisualStyleBackColor = true;
+            this.AppendButton.Click += new System.EventHandler(this.AppendButton_Click);
             // 
             // MainForm
             // 
@@ -222,6 +235,7 @@
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button CopyButton;
         private System.Windows.Forms.Button PasteButton;
+        private System.Windows.Forms.Button AppendButton;
     }
 }
 
