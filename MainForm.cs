@@ -16,6 +16,7 @@ namespace CaseConverter
         {
             InitializeComponent();
         }
+        #region Case Functions
 
         private void UpperCaseButton_Click(object sender, EventArgs e)
         {
@@ -80,7 +81,31 @@ namespace CaseConverter
 
         private void TitleCase_Click(object sender, EventArgs e)
         {
-
+            bool capNext = true;
+            string textBuffer = string.Empty;
+            for (int i = 0; i < MainTextBox.Text.Length; i++)
+            {
+                if (MainTextBox.Text[i] == (char)32)
+                {
+                    capNext = true;
+                    textBuffer += (char)32;
+                }
+                else
+                {
+                    if (capNext) 
+                    {
+                        if (MainTextBox.Text[i + 1] == (char)32)
+                        {
+                            textBuffer += char.ToLower(MainTextBox.Text[i]);
+                            continue;
+                        }
+                        textBuffer += char.ToUpper(MainTextBox.Text[i]); 
+                    }
+                    else textBuffer += char.ToLower(MainTextBox.Text[i]);
+                    capNext = false;
+                }
+            }
+            MainTextBox.Text = textBuffer;
         }
 
         private void AlternatingCase_Click(object sender, EventArgs e)
@@ -91,6 +116,7 @@ namespace CaseConverter
                 if (i % 2 != 0) textBuffer += char.ToUpper(MainTextBox.Text[i]);
                 else textBuffer += char.ToLower(MainTextBox.Text[i]);
             }
+            MainTextBox.Text = textBuffer;
         }
 
         private void SentenceCase_Click(object sender, EventArgs e)
@@ -117,5 +143,23 @@ namespace CaseConverter
             }
             MainTextBox.Text = textBuffer;
         }
+        #endregion
+        #region Utilities
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            MainTextBox.Text = string.Empty;
+        }
+
+        private void CopyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(MainTextBox.Text);
+        }
+
+        private void PasteButton_Click(object sender, EventArgs e)
+        {
+            MainTextBox.Text = Clipboard.GetText();
+        }
+        #endregion
     }
 }

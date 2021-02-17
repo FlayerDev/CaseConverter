@@ -37,6 +37,9 @@
             this.AlternatingCase = new System.Windows.Forms.Button();
             this.InverseCase = new System.Windows.Forms.Button();
             this.UpperCaseButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.CopyButton = new System.Windows.Forms.Button();
+            this.PasteButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +63,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tableLayoutPanel1.Controls.Add(this.ClearButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.UpperCaseButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.InverseCase, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.AlternatingCase, 5, 0);
@@ -67,6 +71,8 @@
             this.tableLayoutPanel1.Controls.Add(this.SentenceCase, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.LowerCaseButton, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.CapitalizedCase, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.CopyButton, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PasteButton, 6, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -153,6 +159,39 @@
             this.UpperCaseButton.UseVisualStyleBackColor = true;
             this.UpperCaseButton.Click += new System.EventHandler(this.UpperCaseButton_Click);
             // 
+            // ClearButton
+            // 
+            this.ClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClearButton.Location = new System.Drawing.Point(3, 35);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(99, 26);
+            this.ClearButton.TabIndex = 8;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // CopyButton
+            // 
+            this.CopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CopyButton.Location = new System.Drawing.Point(528, 35);
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(114, 26);
+            this.CopyButton.TabIndex = 9;
+            this.CopyButton.Text = "Copy";
+            this.CopyButton.UseVisualStyleBackColor = true;
+            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
+            // 
+            // PasteButton
+            // 
+            this.PasteButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PasteButton.Location = new System.Drawing.Point(648, 35);
+            this.PasteButton.Name = "PasteButton";
+            this.PasteButton.Size = new System.Drawing.Size(101, 26);
+            this.PasteButton.TabIndex = 10;
+            this.PasteButton.Text = "Paste";
+            this.PasteButton.UseVisualStyleBackColor = true;
+            this.PasteButton.Click += new System.EventHandler(this.PasteButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +201,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(760, 400);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Case Converter";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,6 +219,9 @@
         private System.Windows.Forms.Button SentenceCase;
         private System.Windows.Forms.Button LowerCaseButton;
         private System.Windows.Forms.Button CapitalizedCase;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button CopyButton;
+        private System.Windows.Forms.Button PasteButton;
     }
 }
 
