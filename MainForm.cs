@@ -17,6 +17,44 @@ namespace CaseConverter
             InitializeComponent();
         }
 
+        private void UpperCaseButton_Click(object sender, EventArgs e)
+        {
+            string textBuffer = string.Empty;
+            foreach (char item in MainTextBox.Text)
+            {
+                textBuffer += char.ToUpper(item);
+            }
+            MainTextBox.Text = textBuffer;
+        }
 
+        private void LowerCaseButton_Click(object sender, EventArgs e)
+        {
+            string textBuffer = string.Empty;
+            foreach (char item in MainTextBox.Text)
+            {
+                textBuffer += char.ToLower(item);
+            }
+            MainTextBox.Text = textBuffer;
+        }
+
+        private void CapitalizedCase_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InverseCase_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TitleCase_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlternatingCase_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
