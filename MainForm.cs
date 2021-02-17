@@ -160,11 +160,12 @@ namespace CaseConverter
         {
             MainTextBox.Text = Clipboard.GetText();
         }
-        #endregion
 
         private void AppendButton_Click(object sender, EventArgs e)
         {
             MainTextBox.Text += Clipboard.GetText();
         }
+        #endregion
+
     }
 }
